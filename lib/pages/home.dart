@@ -15,13 +15,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int currentPageIndex = 0;
-  List bodies=[
+  List bodies = [
     const HomeBody(title: "Ana Sayfa Body"),
     const NotificationsBody(title: "Bildirimler Body"),
     const MessagesBody(title: "Mesajlar Body")
   ];
-
-  
 
   @override
   Widget build(BuildContext context) {
@@ -37,19 +35,30 @@ class _HomePageState extends State<HomePage> {
             currentPageIndex = index;
           });
         },
-        indicatorColor: Colors.amber,
+        indicatorColor: Colors.teal,
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
-            selectedIcon: Icon(Icons.home),
+            selectedIcon: Icon(
+              Icons.home,
+              color: Colors.white,
+            ),
             icon: Icon(Icons.home_outlined),
             label: 'Ana Sayfa',
           ),
           NavigationDestination(
+            selectedIcon: Icon(
+              Icons.supervised_user_circle,
+              color: Colors.white,
+            ),
             icon: Icon(Icons.supervised_user_circle),
             label: 'Yazarlar',
           ),
           NavigationDestination(
+            selectedIcon: Icon(
+              Icons.category,
+              color: Colors.white,
+            ),
             icon: Icon(Icons.category),
             label: 'Kategoriler',
           ),

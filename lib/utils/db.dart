@@ -8,10 +8,10 @@ class ConnectionDatabase {
 
   Future<MySQLConnection> getConnection() async {
     return await MySQLConnection.createConnection(
-      host: "localhost",
-      port: 3306,
-      userName: "root",
-      password: "",
+      host: "server.ideapark.com.tr",
+      port: 3307,
+      userName: "library_user",
+      password: "librarY123456.",
       databaseName: "library_db",
     );
   }
